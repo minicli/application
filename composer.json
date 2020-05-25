@@ -3,13 +3,14 @@
   "description": "Minicli Application Template",
   "license": "MIT",
   "homepage": "https://github.com/minicli/application",
-  "keywords": ["cli","command-line"],
+  "keywords": ["cli","command-line", "template"],
   "autoload": {
     "psr-4": {
       "App\\": "app/"
     }
   },
+  "minimum-stability": "dev",
   "require": {
-    "minicli/minicli": "^1.0"
+    "minicli/minicli": "^2.0"
   }
 }
