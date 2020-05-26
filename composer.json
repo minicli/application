@@ -9,7 +9,6 @@
       "App\\": "app/"
     }
   },
-  "minimum-stability": "dev",
   "require": {
     "minicli/minicli": "^2.0"
   }
