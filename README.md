@@ -27,7 +27,11 @@ Once the installation is finished, you can run `minicli` it with:
 cd myapp
 ./minicli
 ```
+If that doesn't work for you, you may have to use instead:
 
+```bash
+php minicli
+```
 This will show you the default app signature:
 
 ```bash
@@ -93,6 +97,27 @@ $app->registerCommand('mycommand', function(CommandCall $input) {
 $app->runCommand($argv);
 ```
 
-## Created with Minicli
+## Tests
+To keep dependencies to a minimum, the `minicli/application` template repository doesn't require any specific testing framework, but we highly recommend using [PestPHP](https://pestphp.com), which is the testing framework used by [minicli/minicli](https://github.com/minicli/minicli).
 
-- [Dolphin](https://github.com/do-community/dolphin) - a CLI tool for managing DigitalOcean servers with Ansible.
+### Bootstrapping Tests with PestPHP
+
+To get started with PestPHP to test your Minicli application, first include the required dependencies with:
+
+```bash
+composer require pestphp/pest --dev --with-all-dependencies
+```
+
+Then, run the following command to create a tests folder and a couple example tests:
+
+```bash
+./vendor/bin/pest --init
+```
+
+Then you can use the following command to run the test suite:
+
+```bash
+./vendor/bin/pest
+```
+
+For more details on how to test your application with PestPHP, please refer to the [official documentation](https://pestphp.com/docs/writing-tests).
