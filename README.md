@@ -17,30 +17,30 @@ You'll need `php-cli` and [Composer](https://getcomposer.org/) to get started.
 
 Create a new project with:
 
-```
+```bash
 composer create-project --prefer-dist minicli/application myapp
 ```
 
 Once the installation is finished, you can run `minicli` it with:
 
-```
+```bash
 cd myapp
 ./minicli
 ```
 
 This will show you the default app signature:
 
-```
+```bash
 usage: ./minicli help
 ```
 
 The default `help` command that comes with minicli (`app/Command/Help/DefaultController.php`) auto-generates a tree of available commands:
 
-```
+```bash
 ./minicli help
 ```
 
-```
+```bash
 Available Commands
 
 help
@@ -50,11 +50,11 @@ help
 
 The `help test` command, defined in `app/Command/Help/TestController.php`, shows an echo test of parameters:
 
-```
+```bash
 ./minicli help test user=erika name=value
 ```
 
-```
+```bash
 Hello, erika!
 
 Array
@@ -68,7 +68,7 @@ Array
 
 The simplest minicli script doesn't require using Command Controllers at all. You can delete the `app` folder and use `registerCommand` with an anonymous function, like this:
 
-```
+```php
 #!/usr/bin/php
 <?php
 
