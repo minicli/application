@@ -8,7 +8,7 @@ use Minicli\Output\Helper\TableHelper;
 
 class TableController extends CommandController
 {
-    public function handle()
+    public function handle(): void
     {
         $this->getPrinter()->display('Testing Tables');
 
@@ -16,7 +16,7 @@ class TableController extends CommandController
         $table->addHeader(['Header 1', 'Header 2', 'Header 3']);
 
         for($i = 1; $i <= 10; $i++) {
-            $table->addRow([$i, rand(0, 10), "other string $i"]);
+            $table->addRow([(string)$i, (string)rand(0, 10), "other string $i"]);
         }
 
         $this->getPrinter()->newline();
