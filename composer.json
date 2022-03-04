@@ -11,5 +11,11 @@
   },
   "require": {
     "minicli/minicli": "^3.0"
+  },
+  "require-dev": {
+    "pestphp/pest": "^1.21"
+  },
+  "scripts": {
+    "test" : ["pest"]
   }
 }
