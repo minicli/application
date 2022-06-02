@@ -10,12 +10,18 @@
     }
   },
   "require": {
-    "minicli/minicli": "^3.0"
+    "minicli/minicli": "^3.0",
+    "minicli/command-help": "^0.1.0"
   },
   "require-dev": {
     "pestphp/pest": "^1.21"
   },
   "scripts": {
     "test" : ["pest"]
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
   }
 }

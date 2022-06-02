@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command\Help;
+namespace App\Command\Demo;
 
 use Minicli\Command\CommandController;
 use Minicli\Output\Filter\ColorOutputFilter;

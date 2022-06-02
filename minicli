@@ -11,7 +11,10 @@ use Minicli\App;
 use Minicli\Exception\CommandNotFoundException;
 
 $app = new App([
-    'app_path' => __DIR__ . '/app/Command',
+    'app_path' => [
+        __DIR__ . '/app/Command',
+        '@minicli/command-help'
+    ],
     'debug' => true
 ]);
 
