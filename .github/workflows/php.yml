@@ -31,3 +31,6 @@ jobs:
 
     - name: Run test suite
       run: composer run-script test
+
+    - name: Check code style
+      run: composer lint:test

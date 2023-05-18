@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Command\Demo;
 
 use Minicli\Command\CommandController;
@@ -16,7 +18,7 @@ class TableController extends CommandController
         $table->addHeader(['Header 1', 'Header 2', 'Header 3']);
 
         for($i = 1; $i <= 10; $i++) {
-            $table->addRow([(string)$i, (string)rand(0, 10), "other string $i"]);
+            $table->addRow([(string)$i, (string)rand(0, 10), "other string {$i}"]);
         }
 
         $this->newline();
