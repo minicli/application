@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cf304de246dbdd8c308a657c2365bc0b",
+    "content-hash": "dc2637fd30ee637188c15678391a4543",
     "packages": [
         {
             "name": "minicli/command-help",
@@ -2997,7 +2997,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=8.1"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
 }
