@@ -10,7 +10,7 @@ class TableController extends CommandController
 {
     public function handle(): void
     {
-        $this->getPrinter()->display('Testing Tables');
+        $this->display('Testing Tables');
 
         $table = new TableHelper();
         $table->addHeader(['Header 1', 'Header 2', 'Header 3']);
@@ -19,8 +19,8 @@ class TableController extends CommandController
             $table->addRow([(string)$i, (string)rand(0, 10), "other string $i"]);
         }
 
-        $this->getPrinter()->newline();
-        $this->getPrinter()->rawOutput($table->getFormattedTable(new ColorOutputFilter()));
-        $this->getPrinter()->newline();
+        $this->newline();
+        $this->rawOutput($table->getFormattedTable(new ColorOutputFilter()));
+        $this->newline();
     }
 }
