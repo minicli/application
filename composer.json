@@ -10,14 +10,22 @@
     }
   },
   "require": {
-    "minicli/minicli": "^3.0",
-    "minicli/command-help": "^0.1.0"
+    "php": ">=8.1",
+    "minicli/minicli": "^4.0",
+    "minicli/command-help": "^1.0"
   },
   "require-dev": {
-    "pestphp/pest": "^1.21"
+    "pestphp/pest": "^1.21",
+    "laravel/pint": "^1.10"
   },
   "scripts": {
-    "test" : ["pest"]
+    "lint" : ["pint"],
+    "test:lint" : ["pint --test"],
+    "test:unit" : ["pest"],
+    "test" : [
+      "@test:lint",
+      "@test:unit"
+    ]
   },
   "config": {
     "allow-plugins": {

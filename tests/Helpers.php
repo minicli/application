@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 use Minicli\App;
 use Minicli\Command\CommandCall;
 
 function getCommandsPath(): string
 {
-    return __DIR__ . '/../app/Command';
+    return __DIR__.'/../app/Command';
 }
 
 function getApp(): App

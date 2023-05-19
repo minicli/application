@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Command\Demo;
 
 use Minicli\Command\CommandController;
@@ -10,17 +12,17 @@ class TableController extends CommandController
 {
     public function handle(): void
     {
-        $this->getPrinter()->display('Testing Tables');
+        $this->display('Testing Tables');
 
         $table = new TableHelper();
         $table->addHeader(['Header 1', 'Header 2', 'Header 3']);
 
         for($i = 1; $i <= 10; $i++) {
-            $table->addRow([(string)$i, (string)rand(0, 10), "other string $i"]);
+            $table->addRow([(string)$i, (string)rand(0, 10), "other string {$i}"]);
         }
 
-        $this->getPrinter()->newline();
-        $this->getPrinter()->rawOutput($table->getFormattedTable(new ColorOutputFilter()));
-        $this->getPrinter()->newline();
+        $this->newline();
+        $this->rawOutput($table->getFormattedTable(new ColorOutputFilter()));
+        $this->newline();
     }
 }
