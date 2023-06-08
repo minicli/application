@@ -10,10 +10,21 @@ return [
      * These are the core settings for your application.
      *****************************************************************************/
 
-    'app_name' => envconfig('MINICLI_APP_NAME', 'MiniCLI - Minimalist, dependency-free framework for building CLI-centric PHP applications'),
+    'app_name' => envconfig(
+        'MINICLI_APP_NAME',
+        '
+███╗   ███╗██╗███╗   ██╗██╗ ██████╗██╗     ██╗
+████╗ ████║██║████╗  ██║██║██╔════╝██║     ██║
+██╔████╔██║██║██╔██╗ ██║██║██║     ██║     ██║
+██║╚██╔╝██║██║██║╚██╗██║██║██║     ██║     ██║
+██║ ╚═╝ ██║██║██║ ╚████║██║╚██████╗███████╗██║
+╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝ ╚═════╝╚══════╝╚═╝
+
+Minimalist, dependency-free framework for building CLI-centric PHP applications'
+    ),
 
     'app_path' => [
-        __DIR__.'/app/Command',
+        __DIR__.'/../app/Command',
         '@minicli/command-help'
     ],
 
