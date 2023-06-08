@@ -15,7 +15,7 @@
     "minicli/command-help": "^1.0"
   },
   "require-dev": {
-    "pestphp/pest": "^1.21",
+    "pestphp/pest": "^1.23",
     "laravel/pint": "^1.10"
   },
   "scripts": {
