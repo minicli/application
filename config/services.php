@@ -11,6 +11,6 @@ return [
      *****************************************************************************/
 
     'services' => [
-//        'my_service' => \App\Services\MyService::class,
+        //        'my_service' => \App\Services\MyService::class,
     ],
 ];
